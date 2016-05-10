@@ -1,0 +1,36 @@
+---
+- name: Dummy tasks
+  hosts: all[0]
+  gather_facts: no
+  tasks:
+    - debug: msg="Dummy tags"
+      tags: ["unsafe", "skip-vagrant", "wip"]
+
+- name: Gather all facts
+  hosts: all
+  tasks: []
+
+- name: Base infrastructure
+  hosts: all
+  roles:
+    - {role: vagrant, when: "ansible_env['SUDO_USER'] | default('') == 'vagrant'"}
+
+- name: gridftp servers
+  hosts: gridftp-servers
+  roles:
+    - {role: gridftp, gridftp_mode: server}
+
+- name: gridftp clients
+  hosts: gridftp-clients
+  roles:
+    - {role: gridftp, gridftp_mode: client}
+
+- name: simpleca servers
+  hosts: gridftp-servers
+  roles:
+    - {role: simpleca, simpleca_mode: server}
+
+- name: simpleca clients
+  hosts: gridftp-clients
+  roles:
+    - {role: simpleca, simpleca_mode: client}

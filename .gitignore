@@ -1,0 +1,8 @@
+TAGS
+*~
+.vagrant
+/tmp
+/local
+/vendor
+/site.retry
+*.pyc

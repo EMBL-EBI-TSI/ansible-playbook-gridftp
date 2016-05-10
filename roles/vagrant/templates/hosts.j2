@@ -1,0 +1,9 @@
+127.0.0.1       localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1             localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+{# Workaround Vagrant's host network ip #}
+{% set ipv4_default_item = 1 %}
+
+{% for host in groups['all']%}
+{{hostvars[host].ansible_all_ipv4_addresses[ipv4_default_item|int]}} {{hostvars[host].ansible_fqdn}} {{hostvars[host].ansible_hostname}}
+{% endfor %}

@@ -1,0 +1,7 @@
+---
+gridftp_mappings:
+  - ln: nobody
+    dn: '/O=Grid/OU=GlobusTest/CN=someemail@address'
+
+gridftp_host_cert:
+gridftp_host_key:

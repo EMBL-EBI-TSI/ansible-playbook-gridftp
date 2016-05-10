@@ -1,0 +1,5 @@
+---
+- src: git@github.com:EMBL-EBI-TSI/ansible-gridftp.git
+  scm: git
+- src: git@github.com:EMBL-EBI-TSI/ansible-simpleca.git
+  scm: git
