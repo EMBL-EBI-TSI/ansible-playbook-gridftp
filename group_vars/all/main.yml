@@ -5,5 +5,3 @@ gridftp_ca_cert_repos:
     gpgkey: http://repository.egi.eu/sw/production/cas/1/GPG-KEY-EUGridPMA-RPM-3
     packages:
       - ca-policy-egi-core
-
-gridftp_ca_local_certs: []
