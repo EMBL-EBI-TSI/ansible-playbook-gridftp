@@ -1,10 +1,5 @@
 ---
 gridftp_ca_cert_repos:
-  # - name: eugridpma
-  #   baseurl: http://dist.eugridpma.info/distribution/igtf/current/
-  #   gpgkey: https://dist.eugridpma.info/distribution/igtf/current/GPG-KEY-EUGridPMA-RPM-3
-  #   packages:
-  #     - ca_policy_igtf-classic
   - name: EGI-trustanchors
     baseurl: http://repository.egi.eu/sw/production/cas/1/current/
     gpgkey: http://repository.egi.eu/sw/production/cas/1/GPG-KEY-EUGridPMA-RPM-3
