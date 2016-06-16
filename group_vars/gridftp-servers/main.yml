@@ -1,9 +1,8 @@
 ---
-gridftp_mappings:
-  - ln: nobody
-    dn: '/O=Grid/OU=GlobusTest/CN=luisg@elixir-europe.org'
+gridftp_mappings: []
 
 gridftp_host_cert:
 gridftp_host_key:
 
-gridftp_ca_local_certs: []
+gridftp_restrict_directories:
+  - /tmp
