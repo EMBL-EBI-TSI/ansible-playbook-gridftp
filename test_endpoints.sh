@@ -5,8 +5,9 @@
 
 # List the enpoints, one per line, ie. my.gridftp.server/my/path
 
-declare -a endpoints=(
-)
+# Usage: test_endpoints.sh server/path ...
+
+declare -a endpoints=$*
 
 if [ ${#endpoints[@]} -lt 1 ]; then
   echo "No endpoints defined"
