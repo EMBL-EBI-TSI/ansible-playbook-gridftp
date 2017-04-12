@@ -1,15 +1,5 @@
 ---
 gridftp_ca_local_certs:
-  - name: rcauth-pilot-ica-g1
-    subject: '/DC=eu/DC=rcauth/O=Certification Authorities/CN=Research and Collaboration Authentication Pilot G1 CA'
-    policy: '/DC=eu/DC=rcauth/O=Certification Authorities/CN=Research and Collaboration Authentication Pilot G1 CA" "/DC=eu/DC=rcauth/DC=rcauth-clients/*"'
-    cert_file: files/rcauth-pilot-ica-g1.pem
-
-  - name: DDCA-Root-G1-CA
-    subject: '/DC=nl/DC=dutchgrid/O=Certification Authorities/CN=DCA Root G1 CA'
-    policy: '"/DC=nl/DC=dutchgrid/O=Certification Authorities/CN=DCA Root G1 CA" "/DC=eu/DC=rcauth/O=Certification Authorities/CN=Research and Collaboration Authentication Pilot G1 CA" "/C=NL/O=NIKHEF/CN=NIKHEF medium-security certification auth"'
-    cert_file: files/DDCA-Root-G1-CA.pem
-
   - name: TERENA-SSL-CA-3
     subject: '/C=NL/ST=Noord-Holland/L=Amsterdam/O=TERENA/CN=TERENA SSL CA 3'
     policy: '/C=CZ/*/CN=globus.du3.cesnet.cz'
